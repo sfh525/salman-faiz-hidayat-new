@@ -14,6 +14,9 @@
   --font: "Outfit", system-ui, sans-serif;
   --display: "Fraunces", Georgia, serif;
   --header-h: 76px;
+  --scroll-experience: min(46vh, 420px);
+  --scroll-projects: min(62vh, 680px);
+  --scroll-certs: min(58vh, 640px);
 }
 
 [data-theme="light"] {
@@ -486,12 +489,92 @@ section {
   }
 }
 
+.scroll-shell {
+  position: relative;
+}
+
+.scroll-shell::before,
+.scroll-shell::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 10px;
+  height: 40px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.scroll-shell::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+}
+
+.scroll-shell::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg), transparent);
+}
+
+.scroll-shell.has-overflow::after,
+.scroll-shell.is-scrolled::before {
+  opacity: 1;
+}
+
+.scroll-shell.is-end::after {
+  opacity: 0;
+}
+
+.scroll-panel {
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  padding: 8px 12px 16px 4px;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--gold) 75%, transparent) transparent;
+}
+
+#experience-list.scroll-panel {
+  max-height: var(--scroll-experience);
+}
+
+#project-grid.scroll-panel {
+  max-height: var(--scroll-projects);
+}
+
+#cert-grid.scroll-panel {
+  max-height: var(--scroll-certs);
+}
+
+.scroll-panel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.scroll-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--gold) 70%, transparent);
+  border-radius: 99px;
+}
+
+.scroll-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .exp-item {
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: 28px;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
+}
+
+#experience-list .exp-item:last-child {
+  border-bottom: 0;
 }
 
 .exp-meta {
@@ -864,6 +947,12 @@ section {
 }
 
 @media (max-width: 680px) {
+  :root {
+    --scroll-experience: min(42vh, 360px);
+    --scroll-projects: min(55vh, 560px);
+    --scroll-certs: min(52vh, 520px);
+  }
+
   .project-grid,
   .cert-grid {
     grid-template-columns: 1fr;

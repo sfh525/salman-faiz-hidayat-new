@@ -199,28 +199,66 @@ function renderFooter() {
   $("#footer-github").href = SITE.github;
 }
 
-let revealObserver;
+const revealObservers = [];
 
 function observeReveals() {
+  revealObservers.forEach((observer) => observer.disconnect());
+  revealObservers.length = 0;
+
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     $$(".reveal").forEach((el) => el.classList.add("in-view"));
     return;
   }
 
-  revealObserver?.disconnect();
-  revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-  );
+  const groups = new Map();
+  $$(".reveal").forEach((el) => {
+    const root = el.closest(".scroll-panel") || null;
+    const key = root || "viewport";
+    if (!groups.has(key)) groups.set(key, { root, els: [] });
+    groups.get(key).els.push(el);
+  });
 
-  $$(".reveal").forEach((el) => revealObserver.observe(el));
+  groups.forEach(({ root, els }) => {
+    const observer = new IntersectionObserver(
+      (entries, current) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("in-view");
+          current.unobserve(entry.target);
+        });
+      },
+      {
+        root,
+        threshold: 0.12,
+        rootMargin: root ? "0px 0px -16px 0px" : "0px 0px -40px 0px",
+      }
+    );
+    els.forEach((el) => observer.observe(el));
+    revealObservers.push(observer);
+  });
+}
+
+function updateScrollFade(panel) {
+  const shell = panel.closest(".scroll-shell");
+  if (!shell) return;
+  const overflow = panel.scrollHeight > panel.clientHeight + 2;
+  shell.classList.toggle("has-overflow", overflow);
+  shell.classList.toggle("is-scrolled", panel.scrollTop > 6);
+  const atEnd = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 8;
+  shell.classList.toggle("is-end", !overflow || atEnd);
+}
+
+function updateAllScrollFades() {
+  $$(".scroll-panel").forEach(updateScrollFade);
+}
+
+function initScrollPanels() {
+  $$(".scroll-panel").forEach((panel) => {
+    panel.addEventListener("scroll", () => updateScrollFade(panel), { passive: true });
+    const observer = new ResizeObserver(() => updateScrollFade(panel));
+    observer.observe(panel);
+    updateScrollFade(panel);
+  });
 }
 
 function initNav() {
@@ -291,6 +329,7 @@ function initFilters() {
     $$(".filter-chip").forEach((chip) => chip.classList.remove("is-active"));
     button.classList.add("is-active");
     renderProjects(button.dataset.filter);
+    updateAllScrollFades();
   });
 }
 
@@ -365,6 +404,7 @@ function init() {
   initFilters();
   initLightbox();
   initRotator();
+  initScrollPanels();
   observeReveals();
 }
 
