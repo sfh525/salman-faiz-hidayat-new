@@ -36,7 +36,7 @@ export const SITE = {
   nickname: "Faiz",
   role: "Computer Science undergraduate",
   school: "Gadjah Mada University",
-  bio: "A lifelong learner of all things tech. Currently focusing on data analysis and machine learning engineering.",
+  bio: "A lifelong learner of all things tech. Currently focusing on data science and machine learning engineering.",
   rotating: [
     "software engineering",
     "machine learning",
