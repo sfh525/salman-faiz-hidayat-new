@@ -111,6 +111,13 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
+    title: "Puppis Chatbot",
+    description: "A helpful chatbot to help employees understand projects without having to skim through pages of documentations or files of code, built in collaboration with tiket.com interns.",
+    image: "./assets/thumbnails/puppis.jpeg",
+    url: "https://lnkd.in/p/gUcjDaS8",
+    category: "AI Engineering",
+  },
+  {
     title: "CEEMDAN–WT–DAIN Preprocessing",
     description: "A novel preprocessing method to more accurately predict daily closing stock prices.",
     image: "./assets/thumbnails/stock_market_visual.jpeg",
@@ -154,18 +161,18 @@ export const PROJECTS = [
     category: "Computer Vision",
   },
   {
-    title: "Music Genre Classification",
-    description: "SVM and a sequential neural network to predict music genre — Data Royale submission.",
-    image: "./assets/thumbnails/sound-data.png",
-    url: "https://colab.research.google.com/drive/1ItziyY92qsWIoeM2axbeZRJPmE81DyNy?usp=sharing",
-    category: "Machine Learning",
-  },
-  {
     title: "Data Royale Awarding Day",
     description: "Awarding day with Nabila Yumna Naafi'a as my teammate.",
     image: "./assets/thumbnails/3rd place data royale.png",
     url: "https://www.linkedin.com/posts/salman-faiz-hidayat-917b9425b_datascience-datasciencecompetitionwinners-activity-7182755433588174848-tK-5?utm_source=share&utm_medium=member_desktop",
     category: "Highlight",
+  },
+  {
+    title: "Music Genre Classification",
+    description: "SVM and a sequential neural network to predict music genre — Data Royale submission.",
+    image: "./assets/thumbnails/sound-data.png",
+    url: "https://colab.research.google.com/drive/1ItziyY92qsWIoeM2axbeZRJPmE81DyNy?usp=sharing",
+    category: "Machine Learning",
   },
   {
     title: "Cholesterol Level Prediction",
