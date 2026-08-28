@@ -65,6 +65,7 @@ export const AWARDS = [
 export const EXPERIENCE = [
   {
     org: "tiket.com",
+    url: "https://www.tiket.com/en-id",
     period: "Aug 2025 - Aug 2026",
     roles: [
       { title: "Data Science Intern" },
