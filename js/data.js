@@ -223,7 +223,7 @@ export const CERTIFICATIONS = [
     title: "Time Series",
     issuer: "Kaggle",
     description: "Fundamentals about time series data, time series feature engineering, modeling, and evaluating",
-    image: "./assets/certs/time_series.jpeg",
+    image: "./assets/certs/time_series.png",
     url: "https://www.kaggle.com/learn/certification/salmanfaizhidayat/time-series",
   },
   {
@@ -272,7 +272,7 @@ export const CERTIFICATIONS = [
     title: "Responsive Web Design",
     issuer: "freeCodeCamp",
     description: "Certification in modern, accessible, responsive layouts.",
-    image: "./assets/certs/FCC Certificate for New Responsive Web Design",
+    image: "./assets/certs/FCC Certificate for New Responsive Web Design.png",
     url: "https://freecodecamp.org/certification/SalmanFaizHidayat/responsive-web-design",
   },
   
