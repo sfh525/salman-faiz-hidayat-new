@@ -127,7 +127,7 @@ export const PROJECTS = [
   },
   {
     title: "Local Tourism Website",
-    description: "A novel preprocessing method to more accurately predict daily closing stock prices.",
+    description: "A website to help local tourism boost online presence and reach wider audience.",
     image: "./assets/thumbnails/Local Tourism Website.png",
     url: "https://mencrang.com",
     category: "Frontend",
