@@ -44,7 +44,7 @@ export const SITE = {
     "natural language processing",
   ],
   photo: "./assets/profile-enhanced.png",
-  email: "sfhdev42@gmail.com",
+  email: "salmanfaizhidayat525@gmail.com",
   linkedin: "https://www.linkedin.com/in/salman-faiz-hidayat-917b9425b/",
   github: "https://github.com/sfh525",
 };
@@ -64,9 +64,23 @@ export const AWARDS = [
 
 export const EXPERIENCE = [
   {
+    org: "tiket.com",
+    period: "Aug 2025 - Aug 2026",
+    roles: [
+      { title: "Data Science Intern" },
+    ],
+  },
+  {
+    org: "KKN-PPM UGM",
+    period: "Jul 2025 - Jul 2026",
+    roles: [
+      { title: "Lead/Student Unit Coordinator" },
+    ],
+  },
+  {
     org: "KOMATIK UGM",
     url: "https://komatik.wg.ugm.ac.id/",
-    period: "Present",
+    period: "Feb 204 - Nov 2025",
     roles: [
       { title: "Vice President 1" },
       { title: "Member of Software Research and Development" },
@@ -75,6 +89,7 @@ export const EXPERIENCE = [
   {
     org: "OmahTI",
     url: "https://omahti.web.id/",
+    period: "Mar 2024 - Dec 2024",
     roles: [
       { title: "Member of Data Science and Artificial Intelligence" },
       { title: "Project Manager Staff" },
@@ -84,23 +99,17 @@ export const EXPERIENCE = [
   {
     org: "Google Developer Student Club",
     url: "https://gdsc.community.dev/universitas-gadjah-mada-sleman-indonesia/",
+    period: "Nov 2023 - Jun 2024",
     roles: [{ title: "Hustler" }],
   },
   {
     org: "Global Mandiri Student Council",
-    url: "https://globalmandiri.sch.id/",
+    period: "Nov 2021 - Sep 2022",
     roles: [{ title: "Head of Educational Division" }],
   },
 ];
 
 export const PROJECTS = [
-  {
-    title: "Fall Detection System",
-    description: "A computer vision system that detects human falls in video.",
-    image: "./assets/thumbnails/falldetection.jpg",
-    url: "https://github.com/sfh525/FallDetection-SlemanFaiz",
-    category: "Computer Vision",
-  },
   {
     title: "CEEMDAN–WT–DAIN Preprocessing",
     description: "A novel preprocessing method to more accurately predict daily closing stock prices.",
@@ -108,6 +117,21 @@ export const PROJECTS = [
     url: "https://github.com/sfh525/CEEMDAN-DAIN-Preprocessing",
     category: "Time Series",
   },
+  {
+    title: "Local Tourism Website",
+    description: "A novel preprocessing method to more accurately predict daily closing stock prices.",
+    image: "./assets/thumbnails/Local Tourism Website.png",
+    url: "https://mencrang.com",
+    category: "Frontend",
+  },
+  {
+    title: "Fall Detection System",
+    description: "A computer vision system that detects human falls in video.",
+    image: "./assets/thumbnails/falldetection.jpg",
+    url: "https://github.com/sfh525/FallDetection-SlemanFaiz",
+    category: "Computer Vision",
+  },
+  
   {
     title: "Food Commodity Price Prediction",
     description: "Datavidia 9 2025 submission using ExtraTrees and KNN for food commodity prices.",
@@ -135,6 +159,13 @@ export const PROJECTS = [
     image: "./assets/thumbnails/sound-data.png",
     url: "https://colab.research.google.com/drive/1ItziyY92qsWIoeM2axbeZRJPmE81DyNy?usp=sharing",
     category: "Machine Learning",
+  },
+  {
+    title: "Data Royale Awarding Day",
+    description: "Awarding day with Nabila Yumna Naafi'a as my teammate.",
+    image: "./assets/thumbnails/3rd place data royale.png",
+    url: "https://www.linkedin.com/posts/salman-faiz-hidayat-917b9425b_datascience-datasciencecompetitionwinners-activity-7182755433588174848-tK-5?utm_source=share&utm_medium=member_desktop",
+    category: "Highlight",
   },
   {
     title: "Cholesterol Level Prediction",
@@ -178,57 +209,64 @@ export const PROJECTS = [
     url: "https://sfh525.github.io/basic-web/",
     category: "Software Engineering",
   },
-  {
-    title: "Data Royale Awarding Day",
-    description: "Awarding day with Nabila Yumna Naafi'a as my teammate.",
-    image: "./assets/thumbnails/3rd place data royale.png",
-    url: "https://www.linkedin.com/posts/salman-faiz-hidayat-917b9425b_datascience-datasciencecompetitionwinners-activity-7182755433588174848-tK-5?utm_source=share&utm_medium=member_desktop",
-    category: "Highlight",
-  },
 ];
 
 export const CERTIFICATIONS = [
   {
-    title: "IELTS Academic",
-    issuer: "IELTS",
-    description: "Overall Band Score 8.0.",
-    image: "",
-    url: "",
-    year: "",
-  },
-  {
-    title: "Full Stack Web Developer",
-    issuer: "The App Brewery",
-    description: "Complete web development bootcamp covering front-end and back-end fundamentals.",
-    image: "",
-    url: "",
-  },
-  {
-    title: "Responsive Web Design",
-    issuer: "freeCodeCamp",
-    description: "Certification in modern, accessible, responsive layouts.",
-    image: "",
-    url: "https://freecodecamp.org/certification/SalmanFaizHidayat/responsive-web-design",
+    title: "Time Series",
+    issuer: "Kaggle",
+    description: "Fundamentals about time series data, time series feature engineering, modeling, and evaluating",
+    image: "./assets/certs/time_series.jpeg",
+    url: "https://www.kaggle.com/learn/certification/salmanfaizhidayat/time-series",
   },
   {
     title: "Intro to Machine Learning",
     issuer: "Kaggle",
     description: "Core supervised learning workflows and model validation.",
-    image: "",
+    image: "./assets/certs/intro_2_ml.jpeg",
     url: "https://www.kaggle.com/learn/certification/salmanfaizhidayat/intro-to-machine-learning",
   },
   {
     title: "Intermediate Machine Learning",
     issuer: "Kaggle",
     description: "Pipelines, categorical encoding, and gradient boosting.",
-    image: "",
+    image: "./assets/certs/intermediate_ml.jpeg",
     url: "https://www.kaggle.com/learn/certification/salmanfaizhidayat/intermediate-machine-learning",
   },
   {
     title: "Intro to Deep Learning",
     issuer: "Kaggle",
     description: "Neural networks with Keras, including dropout and batch normalization.",
-    image: "",
+    image: "./assets/certs/intro_2_dl.jpeg",
     url: "https://www.kaggle.com/learn/certification/salmanfaizhidayat/intro-to-deep-learning",
   },
+  {
+    title: "Google IT Automation with Python",
+    issuer: "Google Careers",
+    description: "Emphasizes the fundamentals of automating things in IT with Python",
+    image: "./assets/certs/google_it.png",
+    url: "https://www.coursera.org/account/accomplishments/professional-cert/XCX04L47FPPK",
+  },
+  {
+    title: "Google Project Management",
+    issuer: "Google Careers",
+    description: "An end-to-end course that teaches how to manage projects and people in the context of tech-related projects",
+    image: "./assets/certs/google_pm.png",
+    url: "https://www.coursera.org/account/accomplishments/professional-cert/GMPF3EU1D760",
+  },
+  {
+    title: "Full Stack Web Developer",
+    issuer: "The App Brewery",
+    description: "Complete web development bootcamp covering front-end and back-end fundamentals.",
+    image: "./assets/certs/appbrewery_fullstack.jpg",
+    url: "https://www.udemy.com/certificate/UC-7b287d4b-dd44-44f5-9599-0cafd762e9d4/",
+  },
+  {
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    description: "Certification in modern, accessible, responsive layouts.",
+    image: "./assets/certs/FCC Certificate for New Responsive Web Design",
+    url: "https://freecodecamp.org/certification/SalmanFaizHidayat/responsive-web-design",
+  },
+  
 ];
