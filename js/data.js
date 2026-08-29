@@ -130,7 +130,7 @@ export const PROJECTS = [
     description: "A live and interactive dashboard to monitor Carbon Monoxide levels around campus using MQ-7 CO sensors.",
     image: "./assets/thumbnails/co.jpeg",
     url: "https://github.com/capstonezeppelin/capstone-zeppelin",
-    category: "NLP",
+    category: "Software Engineering",
   },
   {
     title: "Fall Detection System",
