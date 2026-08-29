@@ -126,11 +126,11 @@ export const PROJECTS = [
     category: "Time Series",
   },
   {
-    title: "Local Tourism Website",
-    description: "A website to help local tourism boost online presence and reach wider audience.",
-    image: "./assets/thumbnails/Local Tourism Website.png",
-    url: "https://mencrang.com",
-    category: "Frontend",
+    title: "Zeppelin: Carbon Monoxide Monitoring System Around Campus",
+    description: "A live and interactive dashboard to monitor Carbon Monoxide levels around campus using MQ-7 CO sensors.",
+    image: "./assets/thumbnails/co.jpeg",
+    url: "https://github.com/capstonezeppelin/capstone-zeppelin",
+    category: "NLP",
   },
   {
     title: "Fall Detection System",
@@ -146,13 +146,6 @@ export const PROJECTS = [
     image: "./assets/thumbnails/food-commodity.jpg",
     url: "https://github.com/sfh525/HaqTuahOpps-Datavidia",
     category: "Time Series",
-  },
-  {
-    title: "Article Category Prediction",
-    description: "NLP classifier for article categories from keywords and headlines, using Torch and BERT.",
-    image: "./assets/thumbnails/articleNLP.jpg",
-    url: "https://github.com/sfh525/article-category-prediction",
-    category: "NLP",
   },
   {
     title: "Fire Detection",
@@ -176,6 +169,13 @@ export const PROJECTS = [
     category: "Machine Learning",
   },
   {
+    title: "Article Category Prediction",
+    description: "NLP classifier for article categories from keywords and headlines, using Torch and BERT.",
+    image: "./assets/thumbnails/articleNLP.jpg",
+    url: "https://github.com/sfh525/article-category-prediction",
+    category: "NLP",
+  },
+  {
     title: "Cholesterol Level Prediction",
     description: "XGBoost regressor that estimates cholesterol from medical factors.",
     image: "./assets/thumbnails/cholesterol.png",
@@ -188,6 +188,13 @@ export const PROJECTS = [
     image: "./assets/thumbnails/laptop-prices.png",
     url: "https://colab.research.google.com/drive/1Xinb1iqPM8v-Uq1bHk6vP0-7D8hYi9jf?usp=sharing",
     category: "Machine Learning",
+  },
+  {
+    title: "Local Tourism Website",
+    description: "A website to help local tourism boost online presence and reach wider audience.",
+    image: "./assets/thumbnails/Local Tourism Website.png",
+    url: "https://mencrang.com",
+    category: "Frontend",
   },
   {
     title: "Blog Maker",
