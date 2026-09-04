@@ -81,7 +81,7 @@ export const EXPERIENCE = [
   {
     org: "KOMATIK UGM",
     url: "https://komatik.wg.ugm.ac.id/",
-    period: "Feb 204 - Nov 2025",
+    period: "Feb 2024 - Nov 2025",
     roles: [
       { title: "Vice President 1" },
       { title: "Member of Software Research and Development" },
